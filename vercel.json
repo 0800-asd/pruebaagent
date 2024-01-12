@@ -1,12 +1,22 @@
 {
   "redirects": [
     {
-      "source": "/index.html",
+      "source": "/",
       "has": [
         {
           "type": "header",
           "key": "user-agent",
           "value": "python"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "wget"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "curl"
         }
       ],
       "destination": "/denied",
