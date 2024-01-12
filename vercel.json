@@ -7,12 +7,26 @@
           "type": "header",
           "key": "user-agent",
           "value": "Python"
-        },
+        }
+      ],
+      "destination": "/denied",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
         {
           "type": "header",
           "key": "user-agent",
           "value": "Wget/"
-        },
+        }
+      ],
+      "destination": "/denied",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
         {
           "type": "header",
           "key": "user-agent",
