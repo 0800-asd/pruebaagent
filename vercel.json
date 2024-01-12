@@ -6,12 +6,12 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "python"
+          "value": "Python"
         },
         {
           "type": "header",
           "key": "user-agent",
-          "value": "Wget/1.21.4"
+          "value": "Wget/"
         },
         {
           "type": "header",
