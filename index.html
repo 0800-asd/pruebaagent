@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirección basada en User-Agent</title>
-    <script>
-        window.onload = function() {
-            var userAgent = navigator.userAgent.toLowerCase();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Agent Blocking</title>
+  <script>
+    // Función para redirigir a la página "/denied"
+    function redirectToDeniedPage() {
+      window.location.href = "/denied";
+    }
 
-            // Verificar si el User-Agent contiene las palabras clave
-            if (userAgent.includes('wget') || userAgent.includes('curl') || userAgent.includes('python')) {
-                // Redirigir al usuario a la página de denegación
-                window.location.href = 'https://sifcop.com/denied';
-            }
-        };
-    </script>
+    // Comprobar el User Agent y redirigir si es "wget", "curl" o "python"
+    function checkUserAgent() {
+      var userAgent = navigator.userAgent.toLowerCase();
+
+      if (userAgent.includes("wget") || userAgent.includes("curl") || userAgent.includes("python")) {
+        // Redirigir si el User Agent coincide
+        redirectToDeniedPage();
+      }
+    }
+
+    // Llamar a la función al cargar la página
+    window.onload = checkUserAgent;
+  </script>
 </head>
 <body>
-    <h1>Página de Contenido</h1>
-    <!-- Aquí va el contenido de tu página -->
+  <h1>Bienvenido</h1>
+  <!-- Contenido de la página principal -->
 </body>
 </html>
